@@ -2,7 +2,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 class postsRepository {
-    // filename is where data will be stored
+    // Filename is where data will be stored
     constructor(filename){
         if (!filename) {
             throw new Error('Creating this repository requires a filename');
@@ -23,7 +23,7 @@ class postsRepository {
         return crypto.randomBytes(6).toString('hex');
     }
 
-    // get all
+    // Returns everything in filename.json
     async getAll() {
         return JSON.parse(
             await fs.promises.readFile(this.filename, {
@@ -32,6 +32,7 @@ class postsRepository {
         );
     }
 
+    // Writes a record into the filename.json
     async write(records) {
         const newRecords = JSON.stringify(records, null, 4);
 
@@ -61,14 +62,14 @@ class postsRepository {
     // Update/edit a post
 
 
-    // delete post
+    // Deletes a record in json
     async delete(id) {
-        const records = this.getAll();
-        const newRecords = records.filter()
-        
+        const records = await this.getAll();
+        const newRecords = records.filter(record => record.id !== id);
+        await this.write(newRecords);
     }
 
-    // Find a post by id
+    // Find a record by id
     async getOne(id) {
         const records = await this.getAll();
 
