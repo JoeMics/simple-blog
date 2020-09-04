@@ -27,13 +27,13 @@ class postsRepository {
     async getAll() {
         return JSON.parse(
             await fs.promises.readFile(this.filename, {
-                 encoding: utf-8 
+                 encoding: 'utf-8' 
             })
         );
     }
 
     async write(records) {
-        newRecords = JSON.stringify(records, null, 4);
+        const newRecords = JSON.stringify(records, null, 4);
 
         try {
             await fs.promises.writeFile(
@@ -50,7 +50,7 @@ class postsRepository {
     async create(attrs) {
         attrs.id = this.randomId();
 
-        records = await this.getAll();
+        const records = await this.getAll();
         records.push(attrs);
 
         await this.write(records);
@@ -62,13 +62,17 @@ class postsRepository {
 
 
     // delete post
+    async delete(id) {
+        const records = this.getAll();
+        const newRecords = records.filter()
+        
+    }
 
     // Find a post by id
     async getOne(id) {
-        records = await this.getAll();
+        const records = await this.getAll();
 
-        // needs testing, is records an array or obj???
-        for (let record in records) {
+        for (let record of records) {
             if (record.id === id){
                 return record;
             }
@@ -78,8 +82,5 @@ class postsRepository {
     }
 
     // Find a post by filter
-
-    // Maybe a writeAll?!?!
-
 }
 module.exports = new postsRepository('posts.json');
