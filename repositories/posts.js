@@ -59,8 +59,16 @@ class postsRepository {
         return attrs;
     }
 
-    // Update/edit a post
+    // Edit a post, attrs must be an object
+    async edit(id, attrs) {
+        const records = await this.getAll();
+        const record = await this.getOne(id);
 
+        Object.assign(record, attrs);
+        records.push(record);
+        
+        await this.write(records);
+    }
 
     // Deletes a record in json
     async delete(id) {
@@ -83,5 +91,19 @@ class postsRepository {
     }
 
     // Find a post by filter
+    async getOneBy(filter) {
+        const records = await this.getAll();
+        
+        const foundRecord = records.forEach((record) => {
+            for (let key in record) {
+                if (record[key] === filter[key]) {
+                    return record;
+                };
+            }
+        });
+
+        console.log(foundRecord);
+        if (foundRecord) return foundRecord;
+    }
 }
 module.exports = new postsRepository('posts.json');

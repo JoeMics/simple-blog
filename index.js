@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 const testPost = async () =>{
-    console.log(await testRepo.delete('85fff301ef18'));
+    console.log(await testRepo.getOneBy({ id: '58648f26bd2a' }));
 };
 testPost();
 
