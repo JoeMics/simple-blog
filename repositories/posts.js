@@ -23,6 +23,12 @@ class postsRepository {
         return crypto.randomBytes(6).toString('hex');
     }
 
+    dateNow() {
+        // Needs extra testing
+        const [month, date, year] = ( new Date() ).toLocaleDateString().split("/");
+        return [year, month, date].join('.');
+    }
+
     // Returns everything in filename.json
     async getAll() {
         return JSON.parse(
@@ -43,13 +49,13 @@ class postsRepository {
             )
         } catch (error) {
             throw new Error(`Could not write to ${this.filename}`);
-            console.log(error);
         }
     }
 
     // Create a post
     async create(attrs) {
         attrs.id = this.randomId();
+        attrs.createdOn = this.dateNow();
 
         const records = await this.getAll();
         records.push(attrs);
@@ -63,6 +69,7 @@ class postsRepository {
     async edit(id, attrs) {
         const records = await this.getAll();
         const record = await this.getOne(id);
+        attrs.editedOn = this.dateNow();
 
         Object.assign(record, attrs);
         records.push(record);
@@ -94,16 +101,23 @@ class postsRepository {
     async getOneBy(filter) {
         const records = await this.getAll();
         
-        const foundRecord = records.forEach((record) => {
+        let foundRecord = null;
+
+        records.forEach((record) => {
             for (let key in record) {
                 if (record[key] === filter[key]) {
-                    return record;
+                    foundRecord = record;
                 };
             }
         });
 
-        console.log(foundRecord);
-        if (foundRecord) return foundRecord;
+        if(foundRecord) {
+            return foundRecord;   
+        } else {
+            throw new Error('No post found');
+        }
     }
+
 }
+
 module.exports = new postsRepository('posts.json');
