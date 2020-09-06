@@ -16,7 +16,7 @@ router.get(`/posts`, async (req, res) => {
         // Show a list of all blog posts
         const allPosts = await postsRepo.getAll();
 
-        let listPosts = null;
+        let listPosts = [];
         allPosts.forEach((post) => {
             listPosts += postsTemplate(post);
         })
