@@ -3,5 +3,10 @@
         "post": "This is a test post",
         "id": "c68164853b90",
         "createdOn": "2020.9.5"
+    },
+    {
+        "post": "This is post 2",
+        "id": "6993847ab5aa",
+        "createdOn": "2020.9.5"
     }
 ]
