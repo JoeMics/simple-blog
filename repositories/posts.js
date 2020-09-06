@@ -2,7 +2,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 class postsRepository {
-    // filename is where data will be stored
+    // Filename is where data will be stored
     constructor(filename){
         if (!filename) {
             throw new Error('Creating this repository requires a filename');
@@ -23,17 +23,24 @@ class postsRepository {
         return crypto.randomBytes(6).toString('hex');
     }
 
-    // get all
+    dateNow() {
+        // Needs extra testing
+        const [month, date, year] = ( new Date() ).toLocaleDateString().split("/");
+        return [year, month, date].join('.');
+    }
+
+    // Returns everything in filename.json
     async getAll() {
         return JSON.parse(
             await fs.promises.readFile(this.filename, {
-                 encoding: utf-8 
+                 encoding: 'utf-8' 
             })
         );
     }
 
+    // Writes a record into the filename.json
     async write(records) {
-        newRecords = JSON.stringify(records, null, 4);
+        const newRecords = JSON.stringify(records, null, 4);
 
         try {
             await fs.promises.writeFile(
@@ -42,15 +49,15 @@ class postsRepository {
             )
         } catch (error) {
             throw new Error(`Could not write to ${this.filename}`);
-            console.log(error);
         }
     }
 
     // Create a post
     async create(attrs) {
         attrs.id = this.randomId();
+        attrs.createdOn = this.dateNow();
 
-        records = await this.getAll();
+        const records = await this.getAll();
         records.push(attrs);
 
         await this.write(records);
@@ -58,17 +65,30 @@ class postsRepository {
         return attrs;
     }
 
-    // Update/edit a post
+    // Edit a post, attrs must be an object
+    async edit(id, attrs) {
+        const records = await this.getAll();
+        const record = await this.getOne(id);
+        attrs.editedOn = this.dateNow();
 
+        Object.assign(record, attrs);
+        records.push(record);
+        
+        await this.write(records);
+    }
 
-    // delete post
+    // Deletes a record in json
+    async delete(id) {
+        const records = await this.getAll();
+        const newRecords = records.filter(record => record.id !== id);
+        await this.write(newRecords);
+    }
 
-    // Find a post by id
+    // Find a record by id
     async getOne(id) {
-        records = await this.getAll();
+        const records = await this.getAll();
 
-        // needs testing, is records an array or obj???
-        for (let record in records) {
+        for (let record of records) {
             if (record.id === id){
                 return record;
             }
@@ -78,8 +98,26 @@ class postsRepository {
     }
 
     // Find a post by filter
+    async getOneBy(filter) {
+        const records = await this.getAll();
+        
+        let foundRecord = null;
 
-    // Maybe a writeAll?!?!
+        records.forEach((record) => {
+            for (let key in record) {
+                if (record[key] === filter[key]) {
+                    foundRecord = record;
+                };
+            }
+        });
+
+        if(foundRecord) {
+            return foundRecord;   
+        } else {
+            throw new Error('No post found');
+        }
+    }
 
 }
+
 module.exports = new postsRepository('posts.json');
