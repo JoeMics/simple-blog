@@ -10,8 +10,7 @@ const app = express();
 app.use(postsRouter);
 
 app.get('/', (req, res) => {
-    res.send(postsTemplate());
-    console.log(req.body);
+    res.send('Welcome to the homepage');
 });
 
 
