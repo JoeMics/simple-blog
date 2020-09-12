@@ -1,22 +1,14 @@
 [
     {
-        "blogPostText": "Still working?",
-        "id": "2567b52f07f8",
+        "blogPostText": "Hello, world. Today I decided to eat some fish.",
+        "title": "My First Blog Post",
+        "id": "01cd6a1aba21",
         "createdOn": "2020.9.12"
     },
     {
-        "blogPostText": "Yo what up",
-        "id": "807e4b4cfb86",
-        "createdOn": "2020.9.12"
-    },
-    {
-        "blogPostText": "Test number 3",
-        "id": "93b1a9bf7d0e",
-        "createdOn": "2020.9.12"
-    },
-    {
-        "blogPostText": "This is a new post by jeeling Micla",
-        "id": "73f0a90e4b43",
+        "blogPostText": "Hello, other world. Today I ate some peanut butter flavoured squid tentacles.",
+        "title": "My Second Blog Post",
+        "id": "c29c2eb85eac",
         "createdOn": "2020.9.12"
     }
 ]
