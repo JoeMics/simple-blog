@@ -13,5 +13,10 @@
         "blogPostText": "Test number 3",
         "id": "93b1a9bf7d0e",
         "createdOn": "2020.9.12"
+    },
+    {
+        "blogPostText": "This is a new post by jeeling Micla",
+        "id": "73f0a90e4b43",
+        "createdOn": "2020.9.12"
     }
 ]
