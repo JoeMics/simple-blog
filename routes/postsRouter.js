@@ -12,10 +12,14 @@ router.get(`/posts`, async (req, res) => {
         const postId = req.query.post;
         const blogPost = await postsRepo.getOne(postId);
 
+        console.log(blogPost);
+
         res.send(postsTemplate(blogPost));
     } else {
         // Show a list of all blog posts
         const allPosts = await postsRepo.getAll();
+
+        console.log(allPosts);
 
         res.send(postsTemplate(allPosts));
         
