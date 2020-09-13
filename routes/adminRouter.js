@@ -16,12 +16,11 @@ router.get('/admin/create-post', async (req, res) => {
 });
 
 router.post('/admin/create-post', upload,  async (req, res) => {
-    const { blogPostText } = req.body;
+    const { blogPostText, title } = req.body;
 
-    await postsRepo.create({ blogPostText });
+    await postsRepo.create({ blogPostText, title });
 
     res.redirect('/posts');
-
 })
 
 module.exports = router;
