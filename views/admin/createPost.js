@@ -3,13 +3,16 @@ const layout = require('../layout');
 module.exports = () => {
     return layout({
         content: `
-            <form method="post" enctype="multipart/form-data"> 
-                <label>Title:</label>
-                <input type="text" size="50" name="title">
-                <label>Post:</label>
-                <input type="text" size="50" name="blogPostText">
-                <input type="submit">
-            </form>
+        <div class="text-toolbar">
+            <a href="javascript:void(0)" onclick="format('bold')"><span class="fas fa-bold"></span></a>
+            <a href="javascript:void(0)" onclick="format('italic')"><span class="fas fa-italic"></span></a>
+            <a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fas fa-list"></span></a>
+            <a href="javascript:void(0)" onclick="setUrl()"><span class="fas fa-link"></span></a>
+            <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
+        </div>
+            <div class="editor"></div>
+            <button onclick="parseInput()">Submit</button>
+        <script src="/scripts/text-editor.js"></script>
         `
     });
 }
