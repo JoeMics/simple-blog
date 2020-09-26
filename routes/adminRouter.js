@@ -15,7 +15,7 @@ router.get('/admin/create-post', async (req, res) => {
     res.send(createPostLayout());
 });
 
-router.post('/admin/create-post', upload,  async (req, res) => {
+router.post('/admin/create-post', async (req, res) => {
     console.log(req.body);
 
     // res.redirect('/posts');

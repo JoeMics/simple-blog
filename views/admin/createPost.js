@@ -10,8 +10,10 @@ module.exports = () => {
             <a href="javascript:void(0)" onclick="setUrl()"><span class="fas fa-link"></span></a>
             <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
         </div>
-            <div class="editor"></div>
-            <button onclick="parseInput()">Submit</button>
+        
+        <div class="editor"></div>
+        <button onclick="parseInput()">Submit</button>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="/scripts/text-editor.js"></script>
         `
     });

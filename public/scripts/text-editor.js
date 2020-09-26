@@ -17,5 +17,13 @@ function setUrl() {
 }
 
 function parseInput() {
-    console.log(document.querySelector('.editor').innerHTML);
+    axios.post('/admin/create-post', {
+        textPost: document.querySelector('.editor').innerHTML
+    })
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 }
