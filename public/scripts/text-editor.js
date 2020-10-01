@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    document.querySelector('.editor-title').setAttribute('contenteditable', 'true');
     document.querySelector('.editor').setAttribute('contenteditable', 'true');
 });
 
@@ -18,7 +19,8 @@ function setUrl() {
 
 function parseInput() {
     axios.post('/admin/create-post', {
-        textPost: document.querySelector('.editor').innerHTML
+        textPost: document.querySelector('.editor').innerHTML,
+        title: document.querySelector('.editor-title').innerHTML
     })
     .then((res) => {
         console.log(res);

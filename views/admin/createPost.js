@@ -11,7 +11,8 @@ module.exports = () => {
             <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
         </div>
         
-        <div class="editor"></div>
+        <div class="editor-title" data-text="Title"></div>
+        <div class="editor" data-text="Write a post..."></div>
         <button onclick="parseInput()">Submit</button>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="/scripts/text-editor.js"></script>
