@@ -118,6 +118,31 @@ class postsRepository {
         }
     }
 
+    async createComment(id) {
+        //post: foo
+        //comments: [
+        //     {
+        //         commentId: bar,
+        //         commentText: foobar,
+        //         commentAuthor: barfoo
+        //     },
+        //     {
+        //         commentId: bar,
+        //         commentText: foobar,
+        //         commentAuthor: barfoo
+        //     }
+        // ]
+
+        //find post
+        const post = await this.getOne(id);
+
+        // add comment attrs
+
+        // update post w/ attrs
+
+        //check to see if makes array
+    }
+
 }
 
 module.exports = new postsRepository('posts.json');

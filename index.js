@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const postsRouter = require('./routes/postsRouter');
 const adminRouter = require('./routes/adminRouter');
+const testComment = require('./repositories/posts');
 
 const app = express();
 
