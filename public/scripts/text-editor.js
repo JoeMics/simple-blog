@@ -23,7 +23,7 @@ function parseInput() {
         title: document.querySelector('.editor-title').innerHTML
     })
     .then((res) => {
-        console.log(res);
+        location.href = '/posts';
     })
     .catch((err) => {
         console.log(err);
