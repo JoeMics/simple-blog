@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "title": "Id test post",
+        "textPost": "This is a post with an id of something<div><br></div>",
+        "id": "297aa11bd697",
+        "createdOn": "2020.10.2"
+    },
+    {
+        "title": "This is Another Post with a Differend Id",
+        "textPost": "Look, a new post!",
+        "id": "e6c32bcf6fdb",
+        "createdOn": "2020.10.2"
+    }
+]
