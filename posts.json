@@ -10,5 +10,23 @@
         "textPost": "Look, a new post!",
         "id": "e6c32bcf6fdb",
         "createdOn": "2020.10.2"
+    },
+    {
+        "title": "Check it out, a list?",
+        "textPost": "<ul><li>fdsfsddsf</li></ul><span style=\"font-size: 1em; font-weight: 400;\">fdsfsdfd</span><br><div>List here:</div><div><ul><li>4324324324</li><li>432432434</li></ul></div>",
+        "id": "74af8492f2ec",
+        "createdOn": "2020.10.3"
+    },
+    {
+        "title": "New Title",
+        "textPost": "Test post",
+        "id": "6b36db31bc81",
+        "createdOn": "2020.10.3"
+    },
+    {
+        "title": "Test post",
+        "textPost": "Does this still work?",
+        "id": "4a539fc5370c",
+        "createdOn": "2020.10.4"
     }
 ]

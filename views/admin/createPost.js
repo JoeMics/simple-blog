@@ -6,7 +6,7 @@ module.exports = () => {
         <div class="text-toolbar">
             <a href="javascript:void(0)" onclick="format('bold')"><span class="fas fa-bold"></span></a>
             <a href="javascript:void(0)" onclick="format('italic')"><span class="fas fa-italic"></span></a>
-            <a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fas fa-list"></span></a>
+            <a href="javascript:void(0)" onclick="format('insertUnorderedList')"><span class="fas fa-list"></span></a>
             <a href="javascript:void(0)" onclick="setUrl()"><span class="fas fa-link"></span></a>
             <span><input id="txtFormatUrl" placeholder="url" class="form-control"></span>
         </div>

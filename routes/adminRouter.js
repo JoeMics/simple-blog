@@ -18,7 +18,7 @@ router.get('/admin/create-post', async (req, res) => {
 router.post('/admin/create-post', async (req, res) => {
     const { title, textPost } = req.body;
     
-    postsRepo.create({ title, textPost });
+    postsRepo.createPost({ title, textPost });
     res.redirect('/posts');
 })
 

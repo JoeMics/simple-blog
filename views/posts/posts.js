@@ -7,7 +7,7 @@ module.exports = (blogPosts) => {
     const showPost = ({ textPost, createdOn, title }) => {
         return `
         <div class="blog-post">
-            <h2>${title}</h2>
+            <h2 class="post-title">${title}</h2>
             <p>${textPost}</p>
             <p>${createdOn}</p>
         </div>
