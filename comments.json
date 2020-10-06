@@ -1,6 +1,19 @@
 [
     {
         "id": "4a539fc5370c",
-        "comments": []
+        "comments": [
+            {
+                "id": "fbdc64c0f543",
+                "createdOn": "2020.10.5",
+                "commentText": "this is a comment",
+                "author": "John Doe"
+            },
+            {
+                "id": "3334ceeabf98",
+                "createdOn": "2020.10.5",
+                "commentText": "this is a comment",
+                "author": "John Doe"
+            }
+        ]
     }
 ]

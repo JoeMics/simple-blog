@@ -63,15 +63,17 @@ module.exports = class Repository {
     }
 
     // Edit a post, attrs must be an object
-    async edit(id, attrs) {
+    async update(id, attrs) {
         const records = await this.getAll();
         const record = await this.getOne(id);
-        attrs.editedOn = this.dateNow();
 
         Object.assign(record, attrs);
-        records.push(record);
+
+        await this.delete(id);
+        const newRecords = await this.getAll()
+        newRecords.push(record);
         
-        await this.write(records);
+        await this.write(newRecords);
     }
 
     // Deletes a record in json

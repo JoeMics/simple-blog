@@ -6,12 +6,6 @@
         "createdOn": "2020.10.2"
     },
     {
-        "title": "This is Another Post with a Differend Id",
-        "textPost": "Look, a new post!",
-        "id": "e6c32bcf6fdb",
-        "createdOn": "2020.10.2"
-    },
-    {
         "title": "Check it out, a list?",
         "textPost": "<ul><li>fdsfsddsf</li></ul><span style=\"font-size: 1em; font-weight: 400;\">fdsfsdfd</span><br><div>List here:</div><div><ul><li>4324324324</li><li>432432434</li></ul></div>",
         "id": "74af8492f2ec",
@@ -28,5 +22,13 @@
         "textPost": "Does this still work?",
         "id": "4a539fc5370c",
         "createdOn": "2020.10.4"
+    },
+    {
+        "title": "This is Another Post with a Differend Id",
+        "textPost": "Look, a new post!",
+        "id": "e6c32bcf6fdb",
+        "createdOn": "2020.10.2",
+        "newEdit": "I just edited this post",
+        "editedOn": "2020.10.5"
     }
 ]

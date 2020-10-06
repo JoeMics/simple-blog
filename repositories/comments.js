@@ -11,22 +11,17 @@ class commentsRepository extends Repository {
             blogPost = await this.create({ id: postId , comments: [] });
         }
 
-        // make an attr called "comments"
+        // make an 'object' called "comments"
         const newComment = {
             id: this.randomId(),
             createdOn: this.dateNow(),
             ...attrs
         }
-        // blogPost.comments.push(newComment);
+
+        // add comment object into the comment array
         blogPost.comments.push(newComment);
-        // console.log(blogPost);
         
-        //call addComment(new method)
-
-    }
-
-    async addComment() {
-        // see this.edit()
+        await this.update(postId, blogPost);
     }
 }
 

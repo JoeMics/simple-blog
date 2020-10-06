@@ -13,6 +13,20 @@ class postsRepository extends Repository {
         return attrs;
     }
 
+    async edit(id, attrs) {
+        const records = await this.getAll();
+        const record = await this.getOne(id);
+        attrs.editedOn = this.dateNow();
+
+        Object.assign(record, attrs);
+
+        await this.delete(id);
+        const newRecords = await this.getAll()
+        newRecords.push(record);
+        
+        await this.write(newRecords);
+    }
+
 }
 
 module.exports = new postsRepository('posts.json');
