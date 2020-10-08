@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const postsRepo = require('../repositories/posts');
+const Posts = require('../repositories/posts');
 const createPostLayout = require('../views/admin/createPost');
 
 
@@ -18,8 +18,8 @@ router.get('/admin/create-post', async (req, res) => {
 router.post('/admin/create-post', async (req, res) => {
     const { title, textPost } = req.body;
     
-    postsRepo.createPost({ title, textPost });
+    Posts.createPost({ title, textPost });
     res.redirect('/posts');
-})
+});
 
 module.exports = router;

@@ -9,11 +9,14 @@ module.exports = () => {
     // };
 
     //exports a div containing comments
+
+    //TODO: find the blog post id using the global data attr
+
     return `
     <div class="comments">
-        <form method="POST" action="/submit-comment">
+        <form method="POST" action="/submit-comment" >
             <input type="text" name="author" placeholder="Your Name">
-            <textarea name="comment-text" placeholder="Leave a Comment!">
+            <textarea name="commentBody" placeholder="Leave a Comment!">
             </textarea>
             <input type="submit">
         </form>

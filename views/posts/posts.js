@@ -4,9 +4,9 @@ const layout = require('../layout');
 module.exports = (blogPosts) => {
 
     // Takes object and displays it with HTML
-    const showPost = ({ textPost, createdOn, title }) => {
+    const showPost = ({ textPost, createdOn, title, id }) => {
         return `
-        <div class="blog-post">
+        <div class="blog-post" id="${id}">
             <h2 class="post-title">${title}</h2>
             <p>${textPost}</p>
             <p>${createdOn}</p>
