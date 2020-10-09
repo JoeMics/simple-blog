@@ -24,9 +24,11 @@ router.get('/posts/:postId', async (req, res) => {
     }
 });
 
-router.post('/submit-comment', (req, res) => {
+router.post('/posts/:postId', (req, res) => {
     const { author, commentBody } =  req.body;
-    console.log(req.path);
+    console.log(author);
+    console.log(commentBody);
+    console.log(req.path.split('/')[2]);
     //refresh the page
     res.redirect('back');
 });

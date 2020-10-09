@@ -14,7 +14,7 @@ module.exports = () => {
 
     return `
     <div class="comments">
-        <form method="POST" action="/submit-comment" >
+        <form method="POST">
             <input type="text" name="author" placeholder="Your Name">
             <textarea name="commentBody" placeholder="Leave a Comment!">
             </textarea>
