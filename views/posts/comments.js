@@ -1,32 +1,38 @@
 const Comments = require('../../repositories/comments');
 
-module.exports = (blogPost) => {
-
-    // the id of the blogPost 
+module.exports = async (blogPost) => {
     const { id } = blogPost;
 
     // func that shows all comments
     const allComments = async (id) => {
-        const commentList = await Comments.getOne(id);
+
+      let commentList = [];
+        try {
+          commentList = await Comments.getOne(id);
+        } catch {
+          return `
+          <p>There are no comments</p>
+          `;
+        };
+
         const commentsArray = commentList.comments;
 
-        return commentsArray.map((comment) => {
+        const newComments = commentsArray.map((comment) => {
           return `
           <div class="single-comment" id="${comment.id}">
             <h2>${comment.author}</h2>
             <p>${comment.commentText}</p>
-            <p>${comment.createdOn}}
+            <p>${comment.createdOn}
           </div>
           `
         });
-        // for (let comments of commentList.comments) {
-        //     console.log(comments.author);
-        // }
-    }
+
+        return newComments.join(' ');
+    };
+
+    const comments = await allComments(id);
+
     //exports a div containing comments
-
-    allComments(id);
-
     return `
     <div class="comments">
         <form method="POST">
@@ -36,7 +42,7 @@ module.exports = (blogPost) => {
             <input type="submit">
         </form>
         <div>
-        ${allComments(id)}
+        ${comments}
         </div>
     </div>
     `;

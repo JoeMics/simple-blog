@@ -19,9 +19,10 @@ router.get('/posts/:postId', async (req, res) => {
         const { postId } = req.params;
         const blogPost = await Posts.getOne(postId);
     
-        res.send(postsTemplate(blogPost) + commentsTemplate(blogPost));
-    } catch {
+        res.send(postsTemplate(blogPost) + await commentsTemplate(blogPost));
+    } catch(error) {
         res.send('Post not found!');
+        console.log(error);
     }
 });
 
