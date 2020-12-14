@@ -5,6 +5,10 @@ module.exports = (blogPosts) => {
 
     // Takes object and displays it with HTML
     const postSnippet = ({ textPost, createdOn, title, id }) => {
+        if (textPost.length >= 500) {
+            textPost = textPost.substring(0, 493) + '...' + '</div>'
+        }
+        
         return `
         <div class="post" id="${id}">
             <a href="/posts/${id}">
