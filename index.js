@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const postsRouter = require('./routes/postsRouter');
 const adminRouter = require('./routes/adminRouter');
+const layout = require('./views/layout')
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(postsRouter);
 app.use(adminRouter);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the homepage');
+    res.send(layout({ content: 'This is home'}));
 });
 
 app.listen(3000);

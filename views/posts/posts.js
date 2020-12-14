@@ -9,8 +9,9 @@ module.exports = (blogPosts) => {
         <div class="post" id="${id}">
             <a href="/posts/${id}">
             <h2 class="post__title">${title}</h2>
-            <p>${textPost}</p>
-            <p>${createdOn}</p>
+            <div class="post__preview">${textPost}
+                <div class="post__date">${createdOn}</div>
+            </div>
             </a>
         </div>
         `
@@ -22,7 +23,7 @@ module.exports = (blogPosts) => {
             allPosts += postSnippet(post);
         }
     }
-    
+
     return layout({
         content: allPosts
     });

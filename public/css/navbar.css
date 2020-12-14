@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav {
+    margin: 0 auto;
+    height: 50px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.nav__elements {
+    margin: 0 auto;
+    height: 100%;
+    width: 400px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nav__elements__element{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.nav__elements__element:hover {
+    text-decoration: underline;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+
+img {
+    height: 100%;
+}
