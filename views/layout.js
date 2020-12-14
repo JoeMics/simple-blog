@@ -35,8 +35,10 @@ module.exports = ({ content }) => {
                     <a class="nav__elements__element__link" href="/admin/create-post">About</a>
                 </div>
             </div>
+        </div">
+        <div class="main">
+            ${content}
         </div>
-        ${content}
         </body>
     </html>
     `
