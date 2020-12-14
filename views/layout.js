@@ -32,7 +32,7 @@ module.exports = ({ content }) => {
                     <a class="nav__elements__element__link" href="#">Contact</a>
                 </div>
                 <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="#">About</a>
+                    <a class="nav__elements__element__link" href="/admin/create-post">About</a>
                 </div>
             </div>
         </div>
