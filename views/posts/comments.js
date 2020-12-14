@@ -32,6 +32,9 @@ module.exports = async (blogPost) => {
 
     const comments = await allComments(id);
 
+    //for now, disable comments:
+    return '<div>Comments are disabled</div>'
+
     //exports a div containing comments
     return `
     <div class="comments">
@@ -46,6 +49,7 @@ module.exports = async (blogPost) => {
         </div>
     </div>
     `;
+
     
     //if no comments, add message saying 'no comments, make one!'
 };

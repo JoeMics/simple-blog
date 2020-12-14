@@ -3,6 +3,7 @@ const express = require('express');
 const Posts = require('../repositories/posts');
 const Comments = require('../repositories/comments');
 const postsTemplate = require('../views/posts/posts');
+const postTemplate = require('../views/posts/post');
 const commentsTemplate = require('../views/posts/comments');
 
 router = express.Router();
@@ -19,7 +20,7 @@ router.get('/posts/:postId', async (req, res) => {
         const { postId } = req.params;
         const blogPost = await Posts.getOne(postId);
     
-        res.send(postsTemplate(blogPost) + await commentsTemplate(blogPost));
+        res.send(postTemplate(blogPost) + await commentsTemplate(blogPost));
     } catch(error) {
         res.send('Post not found!');
         console.log(error);

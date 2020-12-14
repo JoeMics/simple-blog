@@ -1,15 +1,17 @@
 const layout = require('../layout');
 
-
+//Shows a list of all blog posts in site
 module.exports = (blogPosts) => {
 
     // Takes object and displays it with HTML
-    const showPost = ({ textPost, createdOn, title, id }) => {
+    const postSnippet = ({ textPost, createdOn, title, id }) => {
         return `
-        <div class="blog-post" id="${id}">
-            <h2 class="post-title">${title}</h2>
+        <div class="post" id="${id}">
+            <a href="/posts/${id}">
+            <h2 class="post__title">${title}</h2>
             <p>${textPost}</p>
             <p>${createdOn}</p>
+            </a>
         </div>
         `
     }
@@ -17,12 +19,10 @@ module.exports = (blogPosts) => {
     let allPosts = [];
     if (Array.isArray(blogPosts)) {
         for (let post of blogPosts){
-            allPosts += showPost(post);
+            allPosts += postSnippet(post);
         }
-    } else {
-        allPosts = showPost(blogPosts);
     }
-
+    
     return layout({
         content: allPosts
     });
