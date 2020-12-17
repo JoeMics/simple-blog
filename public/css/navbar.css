@@ -20,8 +20,9 @@ a {
     height: 100%;
     width: 400px;
     padding: 0.5rem 1rem;
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.25rem;
+    vertical-align: center;
 }
 
 .nav__elements__element{

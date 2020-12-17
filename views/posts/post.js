@@ -6,11 +6,11 @@ module.exports = (blogPost) => {
 
     const post = `
         <div class="post" id="${id}">
-            <h2 class="post__title">${title}</h2>
+            <h1 class="post__title">${title}</h1>
             <div class="post__text">
                 <p>${textPost}</p>
                 <div class="post__text__date">
-                ${createdOn}
+                posted ${createdOn}
                 </div>
             </div>
         </div>

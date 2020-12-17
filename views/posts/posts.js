@@ -12,9 +12,9 @@ module.exports = (blogPosts) => {
         return `
         <div class="post" id="${id}">
             <a href="/posts/${id}">
-            <h2 class="post__title">${title}</h2>
+            <h1 class="post__title">${title}</h1>
             <div class="post__preview">${textPost}
-                <div class="post__date">${createdOn}</div>
+                <div class="post__date">posted ${createdOn}</div>
             </div>
             </a>
         </div>
