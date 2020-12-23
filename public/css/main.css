@@ -41,6 +41,11 @@
     margin: 0 auto;
 }
 
+.post{
+    color: #373736;
+    letter-spacing: 1px;
+}
+
 .post:not(:last-of-type){
     padding-bottom: 1rem;
     border-bottom: dotted 1px #000000;
