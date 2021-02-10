@@ -16,8 +16,8 @@ a {
 .nav {
     margin: 0 auto;
     height: 50px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-bottom: 1px solid #A2A2A2;
+    border-top: 1px solid #A2A2A2;
 }
 
 .nav__elements {
@@ -28,18 +28,21 @@ a {
     text-align: center;
     font-size: 1.25rem;
     vertical-align: center;
+    color: #A2A2A2;
+    letter-spacing: 1px;
 }
 
 .nav__elements__element{
-    display: inline-block;
+    display: inline;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     text-align: justify;
     overflow: hidden;
 }
 
 .nav__elements__element:hover {
     text-decoration: underline;
+    color: black;
 }
 
 .header {

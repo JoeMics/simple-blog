@@ -44,6 +44,7 @@
 .post{
     color: #373736;
     letter-spacing: 1px;
+    line-height: 1.75em;
 }
 
 .post:not(:last-of-type){
