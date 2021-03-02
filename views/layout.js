@@ -17,11 +17,7 @@ module.exports = ({ content }) => {
     </head>
     <body>
         <div class="header">
-            <div class="header__logo">
-                <a href="/">
-                    <img src="https://ih1.redbubble.net/image.1095348642.5079/st,small,507x507-pad,600x600,f8f8f8.jpg">
-                </a>
-            </div>
+            <a href="/"><h1>A Simple Blog</h1></a>
         </div>
         <div class="nav">
             <div class="nav__elements">

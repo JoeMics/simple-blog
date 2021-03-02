@@ -13,7 +13,7 @@ module.exports = (blogPost) => {
                 posted ${createdOn}
                 </div>
             </div>
-        </div>
+        </div>e
         `
     
     return layout({
