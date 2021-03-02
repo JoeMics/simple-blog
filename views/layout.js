@@ -17,7 +17,7 @@ module.exports = ({ content }) => {
     </head>
     <body>
         <div class="header">
-            <a href="/"><h1>A Simple Blog</h1></a>
+            <h1><a href="/">A Simple Blog</a></h1>
         </div>
         <div class="nav">
             <div class="nav__elements">
