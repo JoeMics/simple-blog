@@ -37,7 +37,7 @@
 }
 
 .main {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -55,4 +55,17 @@
 .post__date {
     margin-top: 1.5em;
     font-size: 0.8em;
+}
+
+.newsletter {
+    background-color: chartreuse;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.newsletter__img img {
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    padding: 30px;
 }
