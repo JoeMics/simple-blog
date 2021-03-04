@@ -37,6 +37,9 @@
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
     width: 75%;
     margin: 0 auto;
 }
@@ -58,14 +61,23 @@
 }
 
 .newsletter {
+    /* turn into flex container, refer to music player app */
     background-color: chartreuse;
+    display: flex;
     width: 100%;
     margin-top: 50px;
 }
 
+.newsletter__img {
+    width: 300px;
+    height: 300px;
+    border: black 1px solid;
+    flex-shrink: 0;
+}
+
 .newsletter__img img {
     border-radius: 50%;
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     padding: 30px;
 }
