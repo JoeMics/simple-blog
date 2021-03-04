@@ -5,7 +5,7 @@ module.exports = () => {
     const home = `
     <div class="newsletter">
         <div class="newsletter__img">
-            <img src="https://images.unsplash.com/photo-1541298645675-6cc8e127934d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80">
+            <img src="images/profile-photo.jpg">
         </div>
         <div class="newsletter__text">
             <div class="newsletter__description">

@@ -65,25 +65,29 @@
     background-color: chartreuse;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
     margin-top: 50px;
 }
 
 .newsletter__img {
-    width: 300px;
-    height: 300px;
+    display: flex;
+    max-width: 350px;
+    height: auto;
     border: black 1px solid;
-    flex-shrink: 0;
+
 }
 
 .newsletter__img img {
     border-radius: 50%;
-    height: 100%;
+    /* this controls the scaling of the photo */
+    height: auto;
     width: 100%;
     padding: 30px;
 }
 
 .newsletter__text {
+    border: black 1px solid;
     display: flex;
     flex-direction: column;
 }
