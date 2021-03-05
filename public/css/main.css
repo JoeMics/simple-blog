@@ -42,6 +42,7 @@
     flex: 1 0 auto;
     width: 75%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .post{
@@ -62,7 +63,7 @@
 
 .newsletter {
     /* turn into flex container, refer to music player app */
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -71,23 +72,72 @@
 }
 
 .newsletter__img {
+    /* this controls the scaling of the photo */
     display: flex;
-    max-width: 350px;
+    max-width: 600px;
     height: auto;
-    border: black 1px solid;
-
+    /* border: black 1px solid; */
 }
 
 .newsletter__img img {
     border-radius: 50%;
-    /* this controls the scaling of the photo */
     height: auto;
     width: 100%;
     padding: 30px;
 }
 
 .newsletter__text {
-    border: black 1px solid;
+    /* border: black 1px solid; */
     display: flex;
     flex-direction: column;
+    flex: 1 1 500px;
+    justify-content: space-evenly;
+}
+
+.newsletter__description {
+    flex: 0 2 auto;
+}
+
+.newsletter__description > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.newsletter__description > p {
+   font-size: 1.5rem;
+   padding: 0 10%;
+   line-height: 2.5rem;
+}
+
+.newsletter__form {
+    /* border: black 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    height: 3em;
+}
+
+.newsletter__form--email,
+.newsletter__form--submit{
+    /* please revisit */
+    display: flex;
+    border-radius: .5em;
+    padding: .5em;
+}
+
+.newsletter__form--email {
+    flex: 0 2 80%;
+}
+.newsletter__form--email:focus {
+    outline-width: 0;
+}
+
+.newsletter__form--submit {
+    background-color: #EC008F;
+    flex: 0 0 100px;
+    border: 0;
+    border-radius: .5em;
+    display: flex;
+    /* lower two centers text in button */
+    align-items: center;
+    justify-content: center;
 }
