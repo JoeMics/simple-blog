@@ -62,8 +62,6 @@
 }
 
 .newsletter {
-    /* turn into flex container, refer to music player app */
-    /* background-color: chartreuse; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -76,7 +74,6 @@
     display: flex;
     max-width: 600px;
     height: auto;
-    /* border: black 1px solid; */
 }
 
 .newsletter__img img {
@@ -87,7 +84,6 @@
 }
 
 .newsletter__text {
-    /* border: black 1px solid; */
     display: flex;
     flex-direction: column;
     flex: 1 1 500px;
@@ -110,7 +106,6 @@
 }
 
 .newsletter__form {
-    /* border: black 1px solid; */
     display: flex;
     justify-content: space-evenly;
     height: 3em;
@@ -133,6 +128,8 @@
 
 .newsletter__form--submit {
     background-color: #EC008F;
+    cursor: pointer;
+    outline: none;
     flex: 0 0 100px;
     border: 0;
     border-radius: .5em;
@@ -140,4 +137,32 @@
     /* lower two centers text in button */
     align-items: center;
     justify-content: center;
+}
+
+/*left quotation */
+.reviews__review::before { 
+    content: '\201c';
+} 
+
+/*right quotation */
+.reviews__review::after { 
+    content: '\201d';
+} 
+
+.reviews__review::after,
+.reviews__review::before {
+    color:  #EC008F;
+    font-size: 3em;
+}
+
+.reviews__review {
+    background-color: #EEF0EE;
+    border-radius: 15px;
+    font-size: 1.75em;
+}
+
+cite::before {content: '\2015';}
+
+cite {
+    color: #A2A2A2;
 }

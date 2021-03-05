@@ -17,6 +17,17 @@ module.exports = () => {
                 <button type="submit" class="newsletter__form--submit">Spam Me!</button>
             </form>
         </div>
+        <div class="reviews">
+            <blockquote class="reviews__review">
+            Jane Doe delivers content on a heart-pounding, soul penetrating level to which no other can provide <cite> John Smith </cite>
+            </blockquote>
+            <blockquote class="reviews__review">
+            Jane Doe delivers content on a heart-pounding, soul penetrating level to which no other can provide <cite> John Smith </cite>
+            </blockquote>
+            <blockquote class="reviews__review">
+            Jane Doe delivers content on a heart-pounding, soul penetrating level to which no other can provide <cite> John Smith </cite>
+            </blockquote>
+        </div>
     </div>
     `
     
