@@ -39,7 +39,6 @@ module.exports = () => {
                 nec cursus risus. Sed dignissim ante massa, id molestie turpis condimentum quis. Morbi dolor libero, maximus id sapien sit amet, tempor mollis
                  odio. Morbi eget tempus odio. Quisque lacinia, lacus non tempor tincidunt, lectus nulla commodo enim, suscipit pharetra leo ...<a href="/about">Read More</a></p>
             </div>
-
         </div>
     `
     

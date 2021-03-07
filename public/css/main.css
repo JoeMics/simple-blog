@@ -183,6 +183,8 @@ cite {
     background-size: cover;
     border-radius: 15px;
     padding: 2em 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .about__preview * {
@@ -191,6 +193,7 @@ cite {
 
 .about__preview__header {
     font-size: 2em;
+    align-self: center;
 }
 
 .about__preview__text {
