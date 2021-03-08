@@ -92,7 +92,7 @@ footer {
 .footer__socials i {
     display: flex;
     flex: 2 0 0;
-    font-size: 4em;
+    font-size: 3em;
     padding: 0px 10px;
 }
 
@@ -259,4 +259,14 @@ cite {
 .about__preview__text {
     font-size: 1.2em;
     line-height: 2em;
+}
+
+.about__description {
+    font-size: 0.9em;   
+}
+
+.about__description p::first-letter {
+    float: left;
+    font-size: 3em;
+    padding: 0.1em 0.2em 0.2em 0em;
 }
