@@ -35,7 +35,28 @@ module.exports = ({ content }) => {
         <div class="main">
             ${content}
         </div>
-        </body>
+    </body>
+    <footer>
+        <div class="footer__copyright">
+            <p>2021 notarealbloggerorcompanyproductions All Rights Reserved</p>
+        </div>
+        <div class="footer__logo">
+            <img src="images/profile-photo.jpg"/>
+        </div>
+        <div class="footer__socials">
+            <ul>
+                <li>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-youtube-square"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-facebook-square"></a></i>
+                </li>
+            </ul>
+        </div>
+    </footer
     </html>
     `
 }
