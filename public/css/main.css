@@ -261,12 +261,34 @@ cite {
     line-height: 2em;
 }
 
-.about__description {
-    font-size: 0.9em;   
+.about {
+    display: flex;
 }
 
-.about__description p::first-letter {
+.about__description__text {
+    font-size: 0.9em;   
+    flex: 1 1 auto;;
+}
+
+.about__description__text p::first-letter {
     float: left;
     font-size: 3em;
     padding: 0.1em 0.2em 0.2em 0em;
+}
+
+.about-description {
+    display: flex;
+    flex: 1 1 50%;
+    width: 50%;
+}
+
+.about__photo{
+    display: flex;
+    flex: 1 1 50%;
+}
+
+.about__photo > img {
+    max-width: 100%;
+    max-height: auto;
+    /* object-fit: contain;     */
 }
