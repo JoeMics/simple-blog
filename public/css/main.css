@@ -1,5 +1,18 @@
-p {
+p, 
+h1, 
+h2,
+.post {
     color: #373736;    
+    letter-spacing: 0.125em;
+    line-height: 1.75em;
+}
+
+p {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 1.125em;
 }
 
 [contenteditable=true]:empty:not(:focus):before {
@@ -108,12 +121,6 @@ footer {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 3em 0;
-}
-
-.post{
-    color: #373736;
-    letter-spacing: 1px;
-    line-height: 1.75em;
 }
 
 .post:not(:last-of-type){
@@ -284,6 +291,7 @@ cite {
 .about__description {
     background-color: aquamarine;
     display: flex;
+    flex-direction: column;
     flex: 1 1 50%;
     width: 50%;
 }
