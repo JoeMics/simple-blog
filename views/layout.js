@@ -56,7 +56,7 @@ module.exports = ({ content }) => {
                 </li>
             </ul>
         </div>
-    </footer
+    </footer>
     </html>
     `
 }
