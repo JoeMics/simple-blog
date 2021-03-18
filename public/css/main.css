@@ -285,8 +285,8 @@ cite {
  
 .about__description__text p::first-letter {
     float: left; 
-    font-size: 3em; 
-    padding: 0.1em 0.2em 0.2em 0em; 
+    font-size: 2.5em; 
+    padding: 0.1em 0.2em 0.0625em 0em; 
 } 
 
 .about__description {
