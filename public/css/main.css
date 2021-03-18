@@ -1,6 +1,7 @@
 p, 
 h1, 
 h2,
+blockquote,
 .post {
     color: #373736;    
     letter-spacing: 0.125em;
@@ -230,7 +231,7 @@ footer {
 .reviews__review::after,
 .reviews__review::before {
     color:  #EC008F;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .reviews__review {
