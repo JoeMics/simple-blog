@@ -282,7 +282,8 @@ cite {
     font-size: 0.9em;   
     flex: 1 1 auto;;
 }
- 
+
+/* style for drop caps*/
 .about__description__text p::first-letter {
     float: left; 
     font-size: 2.5em; 
