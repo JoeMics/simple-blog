@@ -2,6 +2,7 @@ p,
 h1, 
 h2,
 blockquote,
+div,
 .post {
     color: #373736;    
     letter-spacing: 0.125em;
@@ -321,4 +322,17 @@ cite {
 .about__contact > a {
     text-decoration: underline;
     font-weight: 800;
+}
+
+.contact__form label {
+    display: block;
+    padding-top: 20px;
+}
+
+.label__text--blurred {
+    transform: translateY(-1.5em);
+}
+
+.label__text--focused {
+    transform: none;
 }
