@@ -25,7 +25,7 @@ module.exports = ({ content }) => {
                     <a class="nav__elements__element__link"href="/posts">Posts</a>
                 </div>
                 <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="#">Contact</a>
+                    <a class="nav__elements__element__link" href="/contact">Contact</a>
                 </div>
                 <div class="nav__elements__element">
                     <a class="nav__elements__element__link" href="/about">About</a>
