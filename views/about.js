@@ -21,7 +21,7 @@ module.exports = () => {
         </div>
     </div>
     <h2 class="about__contact">
-        Want to ask me something? Contact me <a href="#">here</a>.
+        Want to ask me something? Contact me <a href="/contact">here</a>.
     </h2>
 
     `

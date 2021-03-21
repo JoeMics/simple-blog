@@ -1,6 +1,6 @@
 html,
 main {
-    min-height: 100%;
+    height: 100%;
 }
 
 body{
@@ -308,7 +308,6 @@ cite {
 .about__description {
     background-color: #f1f6fbbd;
     display: flex;
-    height: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1 1 20em;
@@ -319,10 +318,9 @@ cite {
 }
 
 .about__photo{
-    height: 100%;
     display: flex;
     flex: 1 0 30%;
-    min-width: 22.5vw;
+    min-width: 20.5vw;
 }
 
 .about__photo > img {
