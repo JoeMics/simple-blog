@@ -13,42 +13,43 @@ a {
     color: inherit;
 }
 
+.header {
+    display: flex;
+}
+
 .nav {
-    margin: 0 auto;
-    height: 50px;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
     border-bottom: 1px solid #A2A2A2;
     border-top: 1px solid #A2A2A2;
 }
 
+.nav__title {
+    font-size: 1.625rem;
+}
+
 .nav__elements {
-    margin: 0 auto;
+    display: flex;
+    flex: 2 0 auto;
     height: 100%;
-    width: 400px;
-    padding: 0.5rem 1rem;
-    text-align: center;
     font-size: 1.25rem;
-    vertical-align: center;
-    color: #A2A2A2;
     letter-spacing: 1px;
+    justify-content: flex-end;
 }
 
 .nav__elements__element{
-    display: inline;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    text-align: justify;
-    overflow: hidden;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 0.625em;
 }
 
-.nav__elements__element:hover {
+.nav__elements__element__link {
+    color:#A2A2A2 ;
+}
+
+.nav__elements__element__link:hover {
     text-decoration: underline;
     color: black;
-}
-
-
-.header {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: 20px;
 }

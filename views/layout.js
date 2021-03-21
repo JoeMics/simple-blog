@@ -17,18 +17,18 @@ module.exports = ({ content }) => {
     </head>
     <body>
         <div class="header">
-            <h1><a href="/">A Simple Blog</a></h1>
-        </div>
-        <div class="nav">
-            <div class="nav__elements">
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link"href="/posts">Posts</a>
-                </div>
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="/contact">Contact</a>
-                </div>
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="/about">About</a>
+            <div class="nav">
+                <h1 class="nav__title"><a href="/">A Simple Blog</a></h1>
+                <div class="nav__elements">
+                    <div class="nav__elements__element">
+                        <a class="nav__elements__element__link"href="/posts">Posts</a>
+                    </div>
+                    <div class="nav__elements__element">
+                        <a class="nav__elements__element__link" href="/contact">Contact</a>
+                    </div>
+                    <div class="nav__elements__element">
+                        <a class="nav__elements__element__link" href="/about">About</a>
+                    </div>
                 </div>
             </div>
         </div>
