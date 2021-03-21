@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const postsRepo = require('../repositories/posts');
+const Posts = require('../repositories/posts');
 const createPostLayout = require('../views/admin/createPost');
 
 
@@ -15,12 +15,11 @@ router.get('/admin/create-post', async (req, res) => {
     res.send(createPostLayout());
 });
 
-router.post('/admin/create-post', upload,  async (req, res) => {
-    const { blogPostText, title } = req.body;
-
-    await postsRepo.create({ blogPostText, title });
-
+router.post('/admin/create-post', async (req, res) => {
+    const { title, textPost } = req.body;
+    
+    Posts.createPost({ title, textPost });
     res.redirect('/posts');
-})
+});
 
 module.exports = router;

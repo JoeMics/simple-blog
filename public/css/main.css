@@ -1,0 +1,387 @@
+html,
+main {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+p, 
+h1, 
+h2,
+blockquote,
+div,
+.post {
+    color: #373736;    
+    letter-spacing: 0.125rem;
+    line-height: 1.75rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 1.125rem;
+}
+
+[contenteditable=true]:empty:not(:focus):before {
+    content: attr(data-text)
+}
+
+.editor {
+    border:solid 1px #ccc;
+    padding: 5px;
+    min-height:200px;
+    font-size: 30px;
+}
+
+.editor-title {
+    border:solid 1px #ccc;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.text-toolbar {
+    border: solid 1px #dddddd;
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.text-toolbar > span {
+    cursor: pointer;
+    padding: 1px;
+}
+
+.text-toolbar > a > span:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.post-title {
+    font-size: 20px;
+}
+
+footer {
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-top: dotted 3px #EEF0EE;
+    padding: 10px 0px;
+}
+
+.footer__copyright > p::before {
+    content: '\00A9';
+}
+
+.footer__copyright {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+
+.footer__copyright p {
+    margin: auto 0;
+    font-size: 0.7em;
+}
+.footer__logo {
+    display: flex;
+    margin: auto 0;
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.footer__logo > img {
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.footer__socials {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.footer__socials > ul {
+    display: flex;
+    flex: 1 1 0;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer__socials i {
+    display: flex;
+    flex: 2 0 0;
+    font-size: 3rem;
+    padding: 0px 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 75%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 3em 0;
+}
+
+.post:not(:last-of-type){
+    padding-bottom: 1rem;
+    border-bottom: dotted 1px #000000;
+}
+
+.post__date {
+    margin-top: 1.5em;
+    font-size: 0.8rem;
+}
+
+.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.newsletter__img {
+    /* this controls the scaling of the photo */
+    display: flex;
+    max-width: 600px;
+    height: auto;
+}
+
+.newsletter__img img {
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+}
+
+.newsletter__text {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 500px;
+    justify-content: space-evenly;
+}
+
+.newsletter__description {
+    flex: 0 2 auto;
+}
+
+.newsletter__description > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.newsletter__description > p {
+   font-size: 1.5rem;
+   padding: 0 10%;
+   line-height: 2.5rem;
+}
+
+.newsletter__form {
+    display: flex;
+    justify-content: space-evenly;
+    height: 3em;
+}
+
+.newsletter__form--email,
+.newsletter__form--submit{
+    /* please revisit */
+    display: flex;
+    border-radius: .5em;
+    padding: .5em;
+}
+
+.newsletter__form--email {
+    flex: 0 2 80%;
+}
+.newsletter__form--email:focus {
+    outline-width: 0;
+}
+
+.newsletter__form--submit {
+    background-color: #EC008F;
+    cursor: pointer;
+    outline: none;
+    flex: 0 0 100px;
+    border: 0;
+    border-radius: .5em;
+    display: flex;
+    /* lower two centers text in button */
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5em 0;
+}
+
+/*left quotation */
+.reviews__review::before { 
+    content: '\201c';
+} 
+
+/*right quotation */
+.reviews__review::after { 
+    content: '\201d';
+} 
+
+.reviews__review::after,
+.reviews__review::before {
+    color:  #EC008F;
+    font-size: 2rem;
+}
+
+.reviews__review {
+    border-radius: 15px;
+    font-size: 1.3rem;
+    flex: 1 0 200px;
+    padding: 1em 1em 1em 4em;
+    border-left: #EEF0EE 4px solid;
+    border-right: #EEF0EE 4px solid ;
+}
+
+cite::before {content: '\2015';}
+
+cite {
+    color: #A2A2A2;
+}
+
+.about__preview {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url('../images/pencil-background.png');
+    background-size: cover;
+    border-radius: 15px;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__preview * {
+    padding: 0 2em ;
+}
+
+.about__preview__header {
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+.about__preview__text {
+    font-size: 1.2rem;
+    line-height: 2em;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.about__description__text {
+    font-size: 0.9rem;   
+    flex: 1 1 auto;;
+}
+
+/* style for drop caps*/
+.about__description__text p::first-letter {
+    float: left; 
+    font-size: 2.5rem; 
+    padding: 0.1em 0.2em 0.0625em 0em; 
+} 
+
+.about__description {
+    background-color: #f1f6fbbd;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 20em;
+    min-width: 50vw;
+    justify-content: center;
+    margin-left: 0.5em;
+    padding: 0em 1em;
+}
+
+.about__photo{
+    display: flex;
+    flex: 1 0 30%;
+    min-width: 20.5vw;
+}
+
+.about__photo > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.about__contact > a {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.contact__container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    align-items: center;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact__form label {
+    display: block;
+    padding-top: 1.25em;
+    cursor: text;
+    width: 100%;
+}
+
+.label__text {
+    transition: all 0.2s;
+}
+
+.label__text--blurred {
+    transform: translateY(-1.5em);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.label__text--focused {
+    transform: none;
+}
+
+.contact__form input {
+    flex-basis: 100em;
+    border: 0;
+    border-bottom: dotted 1px #000000;
+    font-size: 1.5rem;
+}
+
+.contact__form input:focus {
+    outline: none;
+    width: 70%;
+}
+
+.contact__address {
+    list-style: none;
+    padding-left: 0;
+}

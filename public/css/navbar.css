@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+html,
+body{
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    border-bottom: 1px solid #A2A2A2;
+    border-top: 1px solid #A2A2A2;
+}
+
+.nav__title {
+    font-size: 1.625rem;
+}
+
+.nav__elements {
+    display: flex;
+    flex: 2 0 auto;
+    height: 100%;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    justify-content: flex-end;
+}
+
+.nav__elements__element{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 0.625em;
+}
+
+.nav__elements__element__link {
+    color:#A2A2A2 ;
+}
+
+.nav__elements__element__link:hover {
+    text-decoration: underline;
+    color: black;
+}
