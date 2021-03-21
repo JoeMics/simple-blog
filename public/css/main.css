@@ -366,7 +366,6 @@ cite {
 }
 
 .contact__form input {
-    width: 90%;
     flex-basis: 100em;
     border: 0;
     border-bottom: dotted 1px #000000;
@@ -375,6 +374,7 @@ cite {
 
 .contact__form input:focus {
     outline: none;
+    width: 70%;
 }
 
 .contact__address {
