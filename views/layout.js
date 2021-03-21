@@ -41,7 +41,7 @@ module.exports = ({ content }) => {
             <p>2021 notarealbloggerorcompanyproductions All Rights Reserved</p>
         </div>
         <div class="footer__logo">
-            <img src="images/profile-photo.jpg"/>
+            <img src="/images/profile-photo.jpg"/>
         </div>
         <div class="footer__socials">
             <ul>
