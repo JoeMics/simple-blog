@@ -1,7 +1,12 @@
 html,
-body,
 main {
-    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 p, 
@@ -11,16 +16,16 @@ blockquote,
 div,
 .post {
     color: #373736;    
-    letter-spacing: 0.125em;
-    line-height: 1.75em;
+    letter-spacing: 0.125rem;
+    line-height: 1.75rem;
 }
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 h1 {
-    font-size: 1.125em;
+    font-size: 1.125rem;
 }
 
 [contenteditable=true]:empty:not(:focus):before {
@@ -118,7 +123,7 @@ footer {
 .footer__socials i {
     display: flex;
     flex: 2 0 0;
-    font-size: 3em;
+    font-size: 3rem;
     padding: 0px 10px;
 }
 
@@ -139,7 +144,7 @@ footer {
 
 .post__date {
     margin-top: 1.5em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .newsletter {
@@ -239,12 +244,12 @@ footer {
 .reviews__review::after,
 .reviews__review::before {
     color:  #EC008F;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .reviews__review {
     border-radius: 15px;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     flex: 1 0 200px;
     padding: 1em 1em 1em 4em;
     border-left: #EEF0EE 4px solid;
@@ -272,12 +277,12 @@ cite {
 }
 
 .about__preview__header {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     align-self: center;
 }
 
 .about__preview__text {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 2em;
 }
 
@@ -289,14 +294,14 @@ cite {
 }
 
 .about__description__text {
-    font-size: 0.9em;   
+    font-size: 0.9rem;   
     flex: 1 1 auto;;
 }
 
 /* style for drop caps*/
 .about__description__text p::first-letter {
     float: left; 
-    font-size: 2.5em; 
+    font-size: 2.5rem; 
     padding: 0.1em 0.2em 0.0625em 0em; 
 } 
 
@@ -357,7 +362,7 @@ cite {
 
 .label__text--blurred {
     transform: translateY(-1.5em);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -369,7 +374,7 @@ cite {
     flex-basis: 100em;
     border: 0;
     border-bottom: dotted 1px #000000;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .contact__form input:focus {
