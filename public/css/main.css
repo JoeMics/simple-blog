@@ -1,3 +1,9 @@
+html,
+body,
+main {
+    height: 100%;
+}
+
 p, 
 h1, 
 h2,
@@ -56,6 +62,7 @@ h1 {
 }
 
 footer {
+    flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -324,10 +331,24 @@ cite {
     font-weight: 800;
 }
 
+.contact__container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    align-items: center;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .contact__form label {
     display: block;
     padding-top: 1.25em;
     cursor: text;
+    width: 100%;
 }
 
 .label__text {
@@ -345,6 +366,8 @@ cite {
 }
 
 .contact__form input {
+    width: 90%;
+    flex-basis: 100em;
     border: 0;
     border-bottom: dotted 1px #000000;
     font-size: 1.5em;
