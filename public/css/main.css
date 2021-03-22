@@ -29,23 +29,6 @@ h1 {
     font-size: 1.125rem;
 }
 
-[contenteditable=true]:empty:not(:focus):before {
-    content: attr(data-text)
-}
-
-.editor {
-    border:solid 1px #ccc;
-    padding: 5px;
-    min-height:200px;
-    font-size: 30px;
-}
-
-.editor-title {
-    border:solid 1px #ccc;
-    padding: 5px;
-    font-size: 30px;
-}
-
 .text-toolbar {
     border: solid 1px #dddddd;
     background: #f4f4f4;
