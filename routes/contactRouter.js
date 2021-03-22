@@ -1,5 +1,4 @@
 const express = require('express');
-const { createComment } = require('../repositories/comments');
 
 const createContactLayout = require('../views/contact');
 

@@ -1,10 +1,8 @@
 const express = require('express');
 
 const Posts = require('../repositories/posts');
-const Comments = require('../repositories/comments');
 const postsTemplate = require('../views/posts/posts');
 const postTemplate = require('../views/posts/post');
-const commentsTemplate = require('../views/posts/comments');
 
 router = express.Router();
 
@@ -25,19 +23,6 @@ router.get('/posts/:postId', async (req, res) => {
         res.send('Post not found!');
         console.log(error);
     }
-});
-
-//handles post request for comment submission
-router.post('/posts/:postId', async (req, res) => {
-    const { author, commentBody } =  req.body;
-    const postId = req.path.split('/')[2];
-
-    await Comments.createComment(postId, { 
-        author, 
-        commentText: commentBody });
-        
-    //refresh the page
-    res.redirect('back');
 });
 
 module.exports = router;
