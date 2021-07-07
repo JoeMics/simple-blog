@@ -12,53 +12,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
-            <h1><a href="/">A Simple Blog</a></h1>
-        </div>
-        <div class="nav">
-            <div class="nav__elements">
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link"href="/posts">Posts</a>
-                </div>
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="#">Contact</a>
-                </div>
-                <div class="nav__elements__element">
-                    <a class="nav__elements__element__link" href="/about">About</a>
-                </div>
+        <div class="newsletter">
+            <div class="newsletter__img">
+                <img src="images/profile-photo.jpg">
             </div>
-        </div">
-        <div class="main">
-            <div class="contact__container">
-                <form class="contact__form" action="">
-                    <h1>Hi, Let's Talk</h1>
-                    <label>
-                        <input type="text" />
-                        <div class="label__text label__text--blurred">Name</div>
-                    </label>
-                    <label>
-                        <input type="text" />
-                        <div class="label__text label__text--blurred">Email</div>
-                    </label>
-                    <label>
-                        <input type="text" />
-                        <div class="label__text label__text--blurred">Message</div>
-                    </label>
+            <div class="newsletter__text">
+                <div class="newsletter__description">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus adipisci molestiae eum quas, nostrum doloribus?</p>
+                </div>
+                <form class="newsletter__form" method="POST" action="/">
+                    <input class="newsletter__form--email" type="text" name="email" id="email" placeholder="Enter your e-mail address"/>
+                    <button type="submit" class="newsletter__form--submit">Spam Me!</button>
                 </form>
-                <div class="contact__card">
-                    <h2>Contact Info</h2>
-                    <ul class="contact__address">
-                        <li>5555 Street</li>
-                        <li>Vancouver, BC</li>
-                        <li>Canada</li>
-                    </ul>
-                    <p>Email: janedoe@email.com</p>
-                    <p>Phone: 555-5555</p>
-                    <p>Fax: 555-5555</p>
+            </div>
+            </div>
+            <div class="reviews">
+                <blockquote class="reviews__review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et impedit culpa quaerat esse aperiam, ad totam fugiat aspernatur quo molestiae!<cite> John Smith </cite>
+                </blockquote>
+                <blockquote class="reviews__review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et impedit culpa quaerat esse aperiam, ad totam fugiat aspernatur quo molestiae!<cite> John Smith </cite>
+                </blockquote>
+                <blockquote class="reviews__review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et impedit culpa quaerat esse aperiam, ad totam fugiat aspernatur quo molestiae!<cite> John Smith </cite>
+                </blockquote>
+            </div>
+            <div class="about__preview">
+                <div class="about__preview__header">
+                    <h2>A Little About Me</h2>
+                </div>
+                <div class="about__preview__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, lorem sit amet iaculis faucibus, augue orci tincidunt nisl, 
+                    a consectetur purus nisl ut arcu. Ut nec leo pharetra, euismod lorem et, vestibulum nisl. Etiam vel tristique enim, non aliquam magna. Nulla
+                    nec cursus risus. Sed dignissim ante massa, id molestie turpis condimentum quis. Morbi dolor libero, maximus id sapien sit amet, tempor mollis
+                     odio. Morbi eget tempus odio. Quisque lacinia, lacus non tempor tincidunt, lectus nulla commodo enim, suscipit pharetra leo ...<a href="/about">Read More</a></p>
                 </div>
             </div>
-
-            <script src="./public/scripts/contact-form.js"></script>
         </div>
     </body>
     <footer>
