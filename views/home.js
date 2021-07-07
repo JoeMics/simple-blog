@@ -14,7 +14,7 @@ module.exports = () => {
             </div>
             <form class="newsletter__form" method="POST" action="/">
                 <input class="newsletter__form--email" type="text" name="email" id="email" placeholder="Enter your e-mail address"/>
-                <button type="submit" class="newsletter__form--submit">Spam Me!</button>
+                <button type="submit" class="newsletter__form--submit">Submit</button>
             </form>
         </div>
     </div>
