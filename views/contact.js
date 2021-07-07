@@ -17,6 +17,7 @@ module.exports = () => {
                 <input type="text" />
                 <div class="label__text label__text--blurred">Message</div>
             </label>
+            <button type="submit" class="contact__form--submit">Submit</button>
         </form>
         <div class="contact__card">
             <h2>Contact Info</h2>
